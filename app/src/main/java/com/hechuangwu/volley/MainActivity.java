@@ -5,9 +5,9 @@ import android.util.Log;
 import android.view.View;
 
 import com.hechuangwu.volley.http.Volley;
-import com.hechuangwu.volley.http.helper.download.DownloadManager;
-import com.hechuangwu.volley.http.helper.inter.IDataListener;
-import com.hechuangwu.volley.http.model.News;
+import com.hechuangwu.volley.request.load.DownloadManager;
+import com.hechuangwu.volley.request.inter.IDataListener;
+import com.hechuangwu.volley.model.News;
 
 import androidx.appcompat.app.AppCompatActivity;
 
