@@ -25,7 +25,27 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     public static final String url = "http://v.juhe.cn/toutiao/index?type=top&key=29da5e8be9ba88b932394b7261092f71";
     public static final String file = "https://05ca8257f7311d2e0d85bb77cc1965e0.dd.cdntips.com/imtt.dd.qq.com/16891/apk/574E6BE8FE169BBCD4C4633C50706231.apk?mkey=5ddf9292778be36d&f=1455&fsname=com.mojiebusiness.mobuz_3.0.001_64.apk&csr=1bbd&cip=119.139.197.152&proto=https";
-    private ImageLoader mImageLoader;
+    public final static String[] imageThumbUrls = new String[]{
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/pPEfy3NmdyAv9Ask.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/SqMQeKCtFw3kLZxk.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/tZAvJZdLfpAvPpUz.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/wxfaqLVdHQmknGat.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/yQL7MMOG7WtL9Db2.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/wlPmhNiIrC.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/cZXax35TaMa8IjWl.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/4aTIbvxk8F8mVLuw.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/vxKM8h8Hx2wWx3xW.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/pPEfy3NmdyAv9Ask.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/SqMQeKCtFw3kLZxk.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/tZAvJZdLfpAvPpUz.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/wxfaqLVdHQmknGat.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/yQL7MMOG7WtL9Db2.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/wlPmhNiIrC.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/cZXax35TaMa8IjWl.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/4aTIbvxk8F8mVLuw.jpg",
+            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/vxKM8h8Hx2wWx3xW.jpg",
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +55,14 @@ public class MainActivity extends AppCompatActivity {
         image();
     }
 
-
+    private ImageLoader mImageLoader;
+    public static ArrayList<String> getData(){
+        ArrayList arrayList = new ArrayList(  );
+        for (int i = 0; i < 10; i++) {
+            Collections.addAll( arrayList, imageThumbUrls );
+        }
+        return arrayList;
+    }
     private void image() {
         setContentView( R.layout.activity_list );
         findViewById( R.id.bt_load ).setOnClickListener( new View.OnClickListener() {
@@ -63,36 +90,6 @@ public class MainActivity extends AppCompatActivity {
         } );
 
     }
-
-    public final static String[] imageThumbUrls = new String[]{
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/pPEfy3NmdyAv9Ask.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/SqMQeKCtFw3kLZxk.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/tZAvJZdLfpAvPpUz.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/wxfaqLVdHQmknGat.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/yQL7MMOG7WtL9Db2.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/wlPmhNiIrC.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/cZXax35TaMa8IjWl.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/4aTIbvxk8F8mVLuw.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/vxKM8h8Hx2wWx3xW.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/pPEfy3NmdyAv9Ask.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/SqMQeKCtFw3kLZxk.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/tZAvJZdLfpAvPpUz.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/wxfaqLVdHQmknGat.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/yQL7MMOG7WtL9Db2.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/wlPmhNiIrC.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/cZXax35TaMa8IjWl.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/4aTIbvxk8F8mVLuw.jpg",
-            "http://mobuz-live.oss-cn-hangzhou.aliyuncs.com/edu/vxKM8h8Hx2wWx3xW.jpg",
-    };
-
-    public static ArrayList<String> getData(){
-        ArrayList arrayList = new ArrayList(  );
-        for (int i = 0; i < 10; i++) {
-            Collections.addAll( arrayList, imageThumbUrls );
-        }
-        return arrayList;
-    }
-
 
 
     private void request() {
