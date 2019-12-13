@@ -27,7 +27,6 @@ public class DownloadResponse implements IDownResponse {
 
     private Item mItem;
     private File mFile;
-    protected String mUrl;
     private long mBreakPoint;//当前进度
     private IDownloadCallback mDownloadCallback;
     private IHttpRequest mHttpRequest;

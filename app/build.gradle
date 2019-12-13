@@ -17,7 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    useLibrary 'org.apache.http.legacy'
+
 }
 
 dependencies {
@@ -27,7 +27,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path:':volley')
+    implementation"com.zhy:base-rvadapter:3.0.3"
+    implementation "com.android.support:recyclerview-v7:29.0.0"
 
-    implementation 'httpcomponents-httpcore:httpcore:4.0-alpha6'
-    implementation 'com.google.code.gson:gson:2.8.6'
 }

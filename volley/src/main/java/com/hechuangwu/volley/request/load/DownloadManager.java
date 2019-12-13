@@ -19,13 +19,18 @@ import java.util.concurrent.FutureTask;
  */
 public class DownloadManager implements IDownloadCallback {
     private static final String TAG = DownloadManager.class.getSimpleName();
-
+    private File mFolder =  Environment.getExternalStorageDirectory();
     private byte[] lock = new byte[0];
+
+    private void setStorageDir(File folder){
+        mFolder = folder;
+    }
+
 
     public void down(String url,String fileName) {
         synchronized (lock) {
 
-            File file = new File( Environment.getExternalStorageDirectory(),fileName);
+            File file = new File( mFolder,fileName);
             Item item = new Item( url, file.getAbsolutePath() );
 
 
