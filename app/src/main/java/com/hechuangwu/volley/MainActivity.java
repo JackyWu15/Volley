@@ -9,8 +9,8 @@ import com.hechuangwu.volley.cache.DoubleCache;
 import com.hechuangwu.volley.config.ImageConfig;
 import com.hechuangwu.volley.model.News;
 import com.hechuangwu.volley.policy.ReversePolicy;
-import com.hechuangwu.volley.request.inter.IDataListener;
-import com.hechuangwu.volley.request.load.DownloadManager;
+import com.hechuangwu.volley.engine.inter.IDataListener;
+import com.hechuangwu.volley.engine.load.DownloadManager;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
 
@@ -20,7 +20,6 @@ import java.util.Collections;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = MainActivity.class.getSimpleName();
     public static final String url = "http://v.juhe.cn/toutiao/index?type=top&key=29da5e8be9ba88b932394b7261092f71";

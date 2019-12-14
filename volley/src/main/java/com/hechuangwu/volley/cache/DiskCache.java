@@ -6,7 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
 
-import com.hechuangwu.volley.request.image.BitmapRequest;
+import com.hechuangwu.volley.engine.image.BitmapRequest;
 import com.hechuangwu.volley.util.disk.DiskLruCache;
 import com.hechuangwu.volley.util.disk.IOUtil;
 

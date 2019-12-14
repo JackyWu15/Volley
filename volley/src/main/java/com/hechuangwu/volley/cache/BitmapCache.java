@@ -2,7 +2,7 @@ package com.hechuangwu.volley.cache;
 
 import android.graphics.Bitmap;
 
-import com.hechuangwu.volley.request.image.BitmapRequest;
+import com.hechuangwu.volley.engine.image.BitmapRequest;
 
 /**
  * Created by cwh on 2019/12/13 0013.

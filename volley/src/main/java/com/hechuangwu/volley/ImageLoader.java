@@ -5,8 +5,8 @@ import android.widget.ImageView;
 
 import com.hechuangwu.volley.config.ImageConfig;
 import com.hechuangwu.volley.config.DisplayConfig;
-import com.hechuangwu.volley.request.image.BitmapRequest;
-import com.hechuangwu.volley.request.image.RequestQueue;
+import com.hechuangwu.volley.engine.image.BitmapRequest;
+import com.hechuangwu.volley.engine.image.RequestQueue;
 
 /**
  * Created by cwh on 2019/12/13 0013.
